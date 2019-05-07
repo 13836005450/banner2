@@ -1,0 +1,19 @@
+/*create by cheny 2019-5-8*/
+.container {
+    margin: 0 20px;
+    background-color: #dddddd;
+    text-align: center;
+    position: relative;
+}
+.traffic {
+    position: absolute;
+    width: 170px;
+    height: 100px;
+    line-height: 100px;
+    left: 70px;
+    top: 35%;
+    border: 1px solid red;
+}
+.num {
+    color: red;
+}
