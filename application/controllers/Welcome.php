@@ -7,12 +7,18 @@ class Welcome extends CI_Controller
 //加载首页
     public function index()
     {
-        $this->load->view('index');
+        $this->load->model('Banner_model');
+        $this->Banner_model->updateTraffic();
+
+
+        $allData = $this->Banner_model->getAllData();
+        $traffic = $this->Banner_model->getTraffic();
+        $this->load->view('index',array(
+            'data'=> $allData,
+            'traffic'=>$traffic,
+        ));
     }
 
-    public function admin()
-    {
-        $this->load->view('admin');
-    }
+
 
 }
